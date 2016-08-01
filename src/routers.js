@@ -46,6 +46,12 @@ export default function (router) {
           component: function index(resolve) {
             require(['./views/button.vue'], resolve);
           },
+        },
+        '/switch': {
+          name: 'switch',
+          component: function index(resolve) {
+            require(['./views/switch.vue'], resolve);
+          },
         }
       }
     },

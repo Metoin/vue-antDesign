@@ -17,5 +17,6 @@
 - Badge 徽标数
 - Card 卡片
 - Collapse 折叠面板
+- Switch 开关
 
 **(持续更新中。。。)**

@@ -34,6 +34,9 @@
             <menu-item v-link="{ name: 'dropdown', activeClass: 'ant-menu-item-selected' }">
               Dropdown 下拉菜单
             </menu-item>
+            <menu-item v-link="{ name: 'switch', activeClass: 'ant-menu-item-selected' }">
+              Switch 开关
+            </menu-item>
           </sub-menu>
         </v-menu>
       </div>
