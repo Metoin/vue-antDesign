@@ -18,5 +18,6 @@
 - Card 卡片
 - Collapse 折叠面板
 - Switch 开关
+- Rate 评分
 
 **(持续更新中。。。)**

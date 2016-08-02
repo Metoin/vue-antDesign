@@ -37,6 +37,12 @@
             <menu-item v-link="{ name: 'switch', activeClass: 'ant-menu-item-selected' }">
               Switch 开关
             </menu-item>
+            <menu-item v-link="{ name: 'slider', activeClass: 'ant-menu-item-selected' }">
+              Slider 滑动输入条
+            </menu-item>
+            <menu-item v-link="{ name: 'rate', activeClass: 'ant-menu-item-selected' }">
+              Rate 评分
+            </menu-item>
           </sub-menu>
         </v-menu>
       </div>

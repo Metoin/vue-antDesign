@@ -52,6 +52,18 @@ export default function (router) {
           component: function index(resolve) {
             require(['./views/switch.vue'], resolve);
           },
+        },
+        '/rate': {
+          name: 'rate',
+          component: function index(resolve) {
+            require(['./views/rate.vue'], resolve);
+          },
+        },
+        '/slider': {
+          name: 'slider',
+          component: function index(resolve) {
+            require(['./views/slider.vue'], resolve);
+          },
         }
       }
     },
