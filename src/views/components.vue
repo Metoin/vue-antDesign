@@ -17,6 +17,9 @@
             <menu-item v-link="{ name: 'button', activeClass: 'ant-menu-item-selected' }">
               Button 按钮
             </menu-item>
+            <menu-item v-link="{ name: 'input-number', activeClass: 'ant-menu-item-selected' }">
+              InputNumber 数字输入框
+            </menu-item>
           </sub-menu>
           <sub-menu title="Form Controls">
             <menu-item v-link="{ name: 'checkbox', activeClass: 'ant-menu-item-selected' }">

@@ -76,7 +76,6 @@
 <script>
 
 import vRate from '../../components/rate'
-import vButton from '../../components/button'
 import codeBox from '../components/codeBox'
 import apiTable from '../components/apiTable'
 
@@ -115,7 +114,6 @@ export default {
   },
   components: {
     vRate,
-    vButton,
     codeBox,
     apiTable
   },

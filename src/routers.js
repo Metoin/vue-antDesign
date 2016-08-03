@@ -59,6 +59,12 @@ export default function (router) {
             require(['./views/rate.vue'], resolve);
           },
         },
+        '/input-number': {
+          name: 'input-number',
+          component: function index(resolve) {
+            require(['./views/input-number.vue'], resolve);
+          },
+        },
         '/slider': {
           name: 'slider',
           component: function index(resolve) {
