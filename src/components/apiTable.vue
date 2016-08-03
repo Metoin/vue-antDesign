@@ -1,6 +1,7 @@
 <template lang="html">
   <section class="markdown api-container">
     <h2>API</h2>
+    <slot></slot>
     <table>
       <thead>
         <tr>
