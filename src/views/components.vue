@@ -18,6 +18,11 @@
               Button 按钮
             </menu-item>
           </sub-menu>
+          <sub-menu title="Form Controls">
+            <menu-item v-link="{ name: 'checkbox', activeClass: 'ant-menu-item-selected' }">
+              Checkbox 多选框
+            </menu-item>
+          </sub-menu>
           <sub-menu title="Components">
             <menu-item v-link="{ name: 'alert', activeClass: 'ant-menu-item-selected' }">
               Alert 警告提醒

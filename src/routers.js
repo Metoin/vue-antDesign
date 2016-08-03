@@ -64,6 +64,12 @@ export default function (router) {
           component: function index(resolve) {
             require(['./views/slider.vue'], resolve);
           },
+        },
+        '/checkbox': {
+          name: 'checkbox',
+          component: function index(resolve) {
+            require(['./views/checkbox.vue'], resolve);
+          },
         }
       }
     },
