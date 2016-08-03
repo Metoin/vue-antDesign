@@ -70,6 +70,18 @@ export default function (router) {
           component: function index(resolve) {
             require(['./views/checkbox.vue'], resolve);
           },
+        },
+        '/notification': {
+          name: 'notification',
+          component: function index(resolve) {
+            require(['./views/notification.vue'], resolve);
+          },
+        },
+        '/message': {
+          name: 'message',
+          component: function index(resolve) {
+            require(['./views/message.vue'], resolve);
+          },
         }
       }
     },

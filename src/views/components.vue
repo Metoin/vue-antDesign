@@ -23,7 +23,7 @@
               Checkbox 多选框
             </menu-item>
           </sub-menu>
-          <sub-menu title="Components">
+          <sub-menu title="Views">
             <menu-item v-link="{ name: 'alert', activeClass: 'ant-menu-item-selected' }">
               Alert 警告提醒
             </menu-item>
@@ -47,6 +47,12 @@
             </menu-item>
             <menu-item v-link="{ name: 'rate', activeClass: 'ant-menu-item-selected' }">
               Rate 评分
+            </menu-item>
+            <menu-item v-link="{ name: 'notification', activeClass: 'ant-menu-item-selected' }">
+              Notification 通知提醒框
+            </menu-item>
+            <menu-item v-link="{ name: 'message', activeClass: 'ant-menu-item-selected' }">
+              Message 全局提示
             </menu-item>
           </sub-menu>
         </v-menu>
