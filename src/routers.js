@@ -99,6 +99,12 @@ export default function (router) {
           name: 'steps',
           component: function index(resolve) {
             require(['./views/steps.vue'], resolve);
+          }
+        },
+        '/radio': {
+          name: 'radio',
+          component: function index(resolve) {
+            require(['./views/radio.vue'], resolve);
           },
         }
       }

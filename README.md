@@ -24,6 +24,7 @@
 - inputNumber 数字输入框
 - Affix 固钉
 - Steps 步骤条
+- radio 单选框
 
 
 **(持续更新中。。。)**
