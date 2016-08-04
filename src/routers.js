@@ -105,11 +105,17 @@ export default function (router) {
           name: 'radio',
           component: function index(resolve) {
             require(['./views/radio.vue'], resolve);
-          },
+          }
+        },
+        '/model': {
+          name: 'model',
+          component: function index(resolve) {
+            require(['./views/model.vue'], resolve);
+          }
         }
       }
     },
-    //404è·¯ç”±
+    //404Â·ÓÉ
 		'*': {
 			component: function(resolve) {
 				require(['./views/components.vue'], resolve);

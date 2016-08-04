@@ -60,6 +60,9 @@
             <menu-item v-link="{ name: 'message', activeClass: 'ant-menu-item-selected' }">
               Message 全局提示
             </menu-item>
+            <menu-item v-link="{ name: 'model', activeClass: 'ant-menu-item-selected' }">
+              Mode 摸态框
+            </menu-item>
           </sub-menu>
           <sub-menu title="Navigation">
             <menu-item v-link="{ name: 'steps', activeClass: 'ant-menu-item-selected' }">
@@ -69,7 +72,6 @@
           <sub-menu title="Other">
             <menu-item v-link="{ name: 'affix', activeClass: 'ant-menu-item-selected' }">
               Affix 固钉
-            </menu-item>
           </sub-menu>
         </v-menu>
       </div>
@@ -113,7 +115,7 @@ export default {
     padding: 24px 0 0;
     margin-bottom: 24px;
     background-color: #fff;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
 }
 
