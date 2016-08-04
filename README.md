@@ -22,6 +22,7 @@
 - notification 通知提醒框
 - message 全局提示
 - inputNumber 数字输入框
+- radio 单选框
 
 
 **(持续更新中。。。)**

@@ -94,6 +94,12 @@ export default function (router) {
           component: function index(resolve) {
             require(['./views/affix.vue'], resolve);
           },
+        },
+        '/radio': {
+          name: 'radio',
+          component: function index(resolve) {
+            require(['./views/radio.vue'], resolve);
+          },
         }
       }
     },

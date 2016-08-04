@@ -25,6 +25,9 @@
             <menu-item v-link="{ name: 'checkbox', activeClass: 'ant-menu-item-selected' }">
               Checkbox 多选框
             </menu-item>
+            <menu-item v-link="{ name: 'radio', activeClass: 'ant-menu-item-selected' }">
+              Radio 单选框
+            </menu-item>
           </sub-menu>
           <sub-menu title="Views">
             <menu-item v-link="{ name: 'alert', activeClass: 'ant-menu-item-selected' }">
