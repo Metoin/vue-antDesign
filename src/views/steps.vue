@@ -20,9 +20,18 @@
         <code-box
           title="基本用法"
           describe="简单的步骤条。"
-          code=''
+          code='import Steps from "../../components/steps"
+const Step = Steps.vStep
+
+<Steps :current="1">
+  <Step title="已完成" description="这里是多信息的描述" ></Step>
+  <Step title="进行中" description="这里是多信息的描述" ></Step>
+  <Step title="待运行" description="这里是多信息的描述" ></Step>
+  <Step title="待运行" description="这里是多信息的描述" ></Step>
+</Steps>
+'
         >
-          <Steps :current='1'>
+          <Steps :current="1">
             <Step title="已完成" description="这里是多信息的描述" ></Step>
             <Step title="进行中" description="这里是多信息的描述" ></Step>
             <Step title="待运行" description="这里是多信息的描述" ></Step>
@@ -33,9 +42,18 @@
         <code-box
           title="迷你版"
           describe="迷你版的步骤条，通过设置 <Steps size='small'> 启用."
-          code=''
+          code='import Steps from "../../components/steps"
+const Step = Steps.vStep
+
+<Steps size="small" :current="1">
+  <Step title="已完成" ></Step>
+  <Step title="进行中" ></Step>
+  <Step title="待运行" ></Step>
+  <Step title="待运行" ></Step>
+</Steps>
+'
         >
-          <Steps size="small" :current='1'>
+          <Steps size="small" :current="1">
             <Step title="已完成" ></Step>
             <Step title="进行中" ></Step>
             <Step title="待运行" ></Step>
@@ -46,7 +64,14 @@
         <code-box
           title="带图标的步骤条"
           describe="通过设置 Steps.Step 的 icon 属性，可以启用自定义图标。"
-          code=''
+          code='import Steps from "../../components/steps"
+const Step = Steps.vStep
+
+<Steps>
+  <Step status="finish" title="步骤1" icon="cloud" ></Step>
+  <Step status="process" title="步骤2" icon="apple" ></Step>
+  <Step status="wait" title="步骤3" icon="github" ></Step>
+</Steps>'
         >
           <Steps>
             <Step status="finish" title="步骤1" icon="cloud" ></Step>
@@ -58,15 +83,51 @@
         <code-box
           title="带图标的步骤条"
           describe="通过设置 Steps.Step 的 icon 属性，可以启用自定义图标。"
-          code=''
+          code='import Steps from "../../components/steps"
+const Step = Steps.vStep
+
+current: 1,
+steps: [
+  {
+    title: "步骤1",
+  },
+  {
+    title: "步骤2",
+  },
+  {
+    title: "步骤3",
+  },
+  {
+    title: "步骤4",
+  }
+],
+
+next() {
+  if (this.current < this.steps.length) {
+    this.current ++
+  }else{
+    this.current = 1
+  }
+}
+
+<div>
+  <div style="margin-bottom: 24px">当前正在执行第 {{current}} 步</div>
+  <Steps :current="current - 1">
+    <Step :key="$index" :title="s.title" v-for="s in steps" ></Step>
+  </Steps>
+  <div style="margin-top: 24px">
+    <button type="button" name="button" class="ant-btn" @click="next">下一步</button>
+  </div>
+</div>
+'
         >
           <div>
-            <div style='margin-bottom: 24px'>当前正在执行第 {{current}} 步</div>
-            <Steps :current='current - 1'>
-              <Step :key='$index' :title="s.title" v-for="s in steps" ></Step>
+            <div style="margin-bottom: 24px">当前正在执行第 {{current}} 步</div>
+            <Steps :current="current - 1">
+              <Step :key="$index" :title="s.title" v-for="s in steps" ></Step>
             </Steps>
-            <div style='margin-top: 24px'>
-              <button type="button" name="button" class="ant-btn" @click='next'>下一步</button>
+            <div style="margin-top: 24px">
+              <button type="button" name="button" class="ant-btn" @click="next">下一步</button>
             </div>
           </div>
         </code-box>
@@ -74,9 +135,18 @@
         <code-box
           title="竖直方向的步骤条"
           describe="简单的竖直方向的步骤条。"
-          code=''
+          code='import Steps from "../../components/steps"
+const Step = Steps.vStep
+
+<Steps :current="1" direction="vertical">
+  <Step title="已完成" description="这里是多信息的描述" ></Step>
+  <Step title="进行中" description="这里是多信息的描述" ></Step>
+  <Step title="待运行" description="这里是多信息的描述" ></Step>
+  <Step title="待运行" description="这里是多信息的描述" ></Step>
+</Steps>
+'
         >
-          <Steps :current='1' direction="vertical">
+          <Steps :current="1" direction="vertical">
             <Step title="已完成" description="这里是多信息的描述" ></Step>
             <Step title="进行中" description="这里是多信息的描述" ></Step>
             <Step title="待运行" description="这里是多信息的描述" ></Step>
@@ -87,9 +157,18 @@
         <code-box
           title="竖直方向的步骤条"
           describe="简单的竖直方向的步骤条。"
-          code=''
+          code='import Steps from "../../components/steps"
+const Step = Steps.vStep
+
+<Steps :current="1" direction="vertical" size="small">
+  <Step title="已完成" description="这里是多信息的描述" ></Step>
+  <Step title="进行中" description="这里是多信息的描述" ></Step>
+  <Step title="待运行" description="这里是多信息的描述" ></Step>
+  <Step title="待运行" description="这里是多信息的描述" ></Step>
+</Steps>
+'
         >
-          <Steps :current='1' direction="vertical" size="small">
+          <Steps :current="1" direction="vertical" size="small">
             <Step title="已完成" description="这里是多信息的描述" ></Step>
             <Step title="进行中" description="这里是多信息的描述" ></Step>
             <Step title="待运行" description="这里是多信息的描述" ></Step>
@@ -100,9 +179,18 @@
         <code-box
           title="步骤运行错误"
           describe="使用 Steps 的 status 属性来指定当前步骤的状态。"
-          code=''
+          code='import Steps from "../../components/steps"
+const Step = Steps.vStep
+
+<Steps :current="1" status="error">
+  <Step title="已完成" description="这里是多信息的描述" ></Step>
+  <Step title="进行中" description="这里是多信息的描述" ></Step>
+  <Step title="待运行" description="这里是多信息的描述" ></Step>
+  <Step title="待运行" description="这里是多信息的描述" ></Step>
+</Steps>
+'
         >
-          <Steps :current='1' status="error">
+          <Steps :current="1" status="error">
             <Step title="已完成" description="这里是多信息的描述" ></Step>
             <Step title="进行中" description="这里是多信息的描述" ></Step>
             <Step title="待运行" description="这里是多信息的描述" ></Step>
