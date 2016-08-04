@@ -87,40 +87,45 @@ export default {
   data: function () {
     return {
       apis: [{
-          parameter: 'type',
-          explain: '设置按钮类型，可选值为 primary ghost 或者不设',
-          type: 'String',
+          parameter: 'min',
+          explain: '最小值',
+          type: 'Number',
+          default: '-Infinity'
+        },{
+          parameter: 'max',
+          explain: '最大值',
+          type: 'Number',
+          default: 'Infinity'
+        },{
+          parameter: 'value',
+          explain: '当前值',
+          type: 'Number',
           default: '无'
         },{
-          parameter: 'icon',
-          explain: '设置按钮的图标类型',
-          type: 'string',
+          parameter: 'step',
+          explain: '每次改变步数，可以为小数',
+          type: 'Number',
+          default: '1'
+        },{
+          parameter: 'defaultValue',
+          explain: '初始值',
+          type: 'Number',
           default: '无'
         },{
-          parameter: 'shape',
-          explain: '设置按钮形状，可选值为 circle circle-outline 或者不设',
-          type: 'String',
+          parameter: 'onChange',
+          explain: '变化回调',
+          type: 'Function',
           default: '无'
         },{
-          parameter: 'size',
-          explain: '设置按钮大小，可选值为 small large 或者不设',
-          type: 'String',
-          default: 'default'
-        },{
-          parameter: 'description',
-          explain: '可选参数，警告提示的辅助性文字介绍',
-          type: 'String',
-          default: '无'
-        },{
-          parameter: 'loading',
-          explain: '设置按钮载入状态',
-          type: 'boolean',
+          parameter: 'disabled',
+          explain: '禁用',
+          type: 'Boolean',
           default: 'false'
         },{
-          parameter: 'onClick',
-          explain: 'click 事件的 handler',
-          type: 'function',
-          default: ''
+          parameter: 'size',
+          explain: '输入框大小',
+          type: 'String',
+          default: '无'
         }
       ],
       disabled: true
