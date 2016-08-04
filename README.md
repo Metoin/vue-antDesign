@@ -22,6 +22,8 @@
 - notification 通知提醒框
 - message 全局提示
 - inputNumber 数字输入框
+- Affix 固钉
+- Steps 步骤条
 
 
 **(持续更新中。。。)**

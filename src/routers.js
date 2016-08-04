@@ -94,6 +94,12 @@ export default function (router) {
           component: function index(resolve) {
             require(['./views/affix.vue'], resolve);
           },
+        },
+        '/steps': {
+          name: 'steps',
+          component: function index(resolve) {
+            require(['./views/steps.vue'], resolve);
+          },
         }
       }
     },

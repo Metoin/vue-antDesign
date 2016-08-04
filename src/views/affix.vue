@@ -59,8 +59,8 @@
         </code-box>
 
         <code-box
-          title="偏移"
-          describe="达到一定的偏移量才触发。"
+          title="固定状态改变的回调"
+          describe="可以获得是否固定的状态。"
           code='onChange: affixed => console.log(affixed)
 
 <v-affix :offset-top="120" :on-change="onChange">
