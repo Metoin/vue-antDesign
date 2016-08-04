@@ -88,6 +88,12 @@ export default function (router) {
           component: function index(resolve) {
             require(['./views/message.vue'], resolve);
           },
+        },
+        '/affix': {
+          name: 'affix',
+          component: function index(resolve) {
+            require(['./views/affix.vue'], resolve);
+          },
         }
       }
     },

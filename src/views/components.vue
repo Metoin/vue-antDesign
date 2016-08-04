@@ -58,6 +58,11 @@
               Message 全局提示
             </menu-item>
           </sub-menu>
+          <sub-menu title="Other">
+            <menu-item v-link="{ name: 'affix', activeClass: 'ant-menu-item-selected' }">
+              Affix 固钉
+            </menu-item>
+          </sub-menu>
         </v-menu>
       </div>
       <div class="main-container ant-col-xs-24 ant-col-sm-24 ant-col-md-18 ant-col-lg-20">
