@@ -19,5 +19,8 @@
 - Collapse 折叠面板
 - Switch 开关
 - Rate 评分
+- notification 通知提醒框
+- message 全局提示
+
 
 **(持续更新中。。。)**

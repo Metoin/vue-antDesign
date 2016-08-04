@@ -3,7 +3,7 @@
   <div>
 
     <section class="markdown">
-      <h1>Message全局提示</h1>
+      <h1>Message 全局提示</h1>
       <p>
         全局展示操作反馈信息。
       </p>
@@ -21,7 +21,11 @@
         <code-box
           title="普通提示"
           describe="信息提醒反馈。"
-          code=''
+          code='openMessage() {
+  message.info("这是一条普通的提醒");
+},
+
+<button type="button" class="ant-btn ant-btn-primary" @click="openMessage"><span>显示普通提醒</span></button>'
         >
 
           <button type="button" class="ant-btn ant-btn-primary" @click="openMessage"><span>显示普通提醒</span></button>
@@ -31,7 +35,11 @@
         <code-box
           title="修改延时"
           describe="自定义时长 10s，默认时长为 1.5s"
-          code=''
+          code='time(){
+  message.success("这是一条成功的提示,并将于10秒后消失", 10);
+},
+
+<button type="button" class="ant-btn" @click="time"><span>自定义时长提示</span></button>'
         >
           <button type="button" class="ant-btn" @click="time"><span>自定义时长提示</span></button>
 
@@ -44,11 +52,36 @@
         <code-box
           title="其他提示类型"
           describe="包括成功、失败、警告。"
-          code=''
+          code='success() {
+  message.success("这是一条成功提示");
+},
+error() {
+  message.error("这是一条失败提示");
+},
+warning() {
+  message.warning("这是一条警告提示");
+},
+
+<button type="button" class="ant-btn" @click="success("success")"><span>显示成功信息</span></button>
+<button type="button" class="ant-btn" @click="error("error")"><span>显示失败信息</span></button>
+<button type="button" class="ant-btn" @click="warning("warning")"><span>显示警告信息</span></button>'
         >
           <button type="button" class="ant-btn" @click="success('success')"><span>显示成功信息</span></button>
           <button type="button" class="ant-btn" @click="error('error')"><span>显示失败信息</span></button>
           <button type="button" class="ant-btn" @click="warning('warning')"><span>显示警告信息</span></button>
+        </code-box>
+
+        <code-box
+          title="加载中"
+          describe="进行全局 loading，异步自行移除。"
+          code='loading() {
+  const hide = message.loading("正在执行中...", 0);
+  setTimeout(hide, 2500);
+},
+
+<button type="button" class="ant-btn" @click="loading"><span>显示加载中...</span></button>'
+        >
+          <button type="button" class="ant-btn" @click="loading"><span>显示加载中...</span></button>
         </code-box>
 
       </div>
@@ -61,13 +94,13 @@
       :apis='apis'
     >
       <ul>
-        <li>notification.success(config)</li>
-        <li>notification.error(config)</li>
-        <li>notification.info(config)</li>
-        <li>notification.warning(config)</li>
+        <li><button type="button" class="ant-btn">message.success(content, duration)</button></li>
+        <li><button type="button" class="ant-btn">message.error(content, duration)</button></li>
+        <li><button type="button" class="ant-btn">message.warning(content, duration)</button></li>
+        <li><button type="button" class="ant-btn">message.loading(content, duration)</button></li>
       </ul>
       <p>
-        config 参数如下：
+        参数如下：
       </p>
     </api-table>
 
@@ -78,10 +111,10 @@
         还提供了一个全局配置方法，在调用前提前配置，全局一次生效。
       </p>
       <p>
-          notification.config({
+          <button type="button" class="ant-btn">message.config({
             top: 100,
             duration: 3,
-          });
+          })</button>
       </p>
     </api-table>
 
@@ -99,20 +132,15 @@ export default {
   data: function () {
     return {
       apis: [{
-          parameter: 'message',
-          explain: '通知提醒标题，必选',
-          type: 'Sring',
-          default: '无'
-        },{
-          parameter: 'description',
-          explain: '通知提醒内容，必选',
+          parameter: 'content',
+          explain: '提示内容',
           type: 'Sring',
           default: '无'
         },{
           parameter: 'duration',
-          explain: '默认 4.5 秒后自动关闭，配置为 0 则不自动关闭',
+          explain: '默认 1.5 秒后自动关闭，配置为 0 则不自动关闭',
           type: 'Number',
-          default: '4.5'
+          default: '1.5'
         }
       ],
       config: [{
@@ -124,7 +152,7 @@ export default {
           parameter: 'duration',
           explain: '默认自动关闭延时，单位秒',
           type: 'Number',
-          default: '4.5'
+          default: '1.5'
         }
       ]
     }
@@ -134,16 +162,20 @@ export default {
       message.info("这是一条普通的提醒");
     },
     success() {
-      message.success('这是一条成功提示');
+      message.success("这是一条成功提示");
     },
     error() {
-      message.error('这是一条失败提示');
+      message.error("这是一条失败提示");
     },
     warning() {
-      message.warning('这是一条警告提示');
+      message.warning("这是一条警告提示");
     },
     time(){
-      message.success('这是一条成功的提示,并将于10秒后消失', 10);
+      message.success("这是一条成功的提示,并将于10秒后消失", 10);
+    },
+    loading() {
+      const hide = message.loading("正在执行中...", 0);
+      setTimeout(hide, 2500);
     },
     openNotificationWithIcon(type) {
       notification[type]({
