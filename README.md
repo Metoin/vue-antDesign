@@ -21,6 +21,7 @@
 - Rate 评分
 - notification 通知提醒框
 - message 全局提示
+- inputNumber 数字输入框
 
 
 **(持续更新中。。。)**
