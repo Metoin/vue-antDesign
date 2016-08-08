@@ -27,10 +27,7 @@
     "less-loader": "^2.2.3",
     "vue": "^1.0.21",
     "vue-router": "^0.7.13",
-    "classnames": "^2.2.5",
-    "css-animation": "^1.1.1",
-    "dom-align": "^1.3.0",
-    "dom-scroll-into-view": "^1.1.0"
+    "classnames": "^2.2.5"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

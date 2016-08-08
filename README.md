@@ -25,6 +25,7 @@
 - Affix 固钉
 - Steps 步骤条
 - radio 单选框
+- modal	模态框 
 
 
 **(持续更新中。。。)**
